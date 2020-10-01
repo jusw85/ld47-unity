@@ -103,9 +103,9 @@ public class PlayerInput : MonoBehaviour
             }
         }
 
-        animator.SetBool(AnimatorParams.RUNNING, Mathf.Abs(platformController.Velocity.x) > 0);
-        animator.SetBool(AnimatorParams.IS_GROUNDED, platformController.IsGrounded);
-        animator.SetFloat(AnimatorParams.V_SPEED, platformController.Velocity.y);
+        // animator.SetBool(AnimatorParams.RUNNING, Mathf.Abs(platformController.Velocity.x) > 0);
+        // animator.SetBool(AnimatorParams.IS_GROUNDED, platformController.IsGrounded);
+        // animator.SetFloat(AnimatorParams.V_SPEED, platformController.Velocity.y);
     }
 
     private void SetIsFacingRight(bool isFacingRight)
