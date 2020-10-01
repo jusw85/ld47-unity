@@ -9,6 +9,7 @@ namespace k
 		public const int WATER = 4;
 		public const int UI = 5;
 		public const int SOLID = 8;
+		public const int BOUNDING_BOX = 9;
 
 
 		public static int onlyIncluding( params int[] layers )
