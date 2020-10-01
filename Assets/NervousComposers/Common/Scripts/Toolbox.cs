@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Prime31;
 using UnityEngine;
 
 namespace Jusw85.Common
@@ -20,6 +19,11 @@ namespace Jusw85.Common
 
         protected override void OnAwake()
         {
+            if (trackedComponents == null)
+            {
+                return;
+            }
+
             foreach (Component c in trackedComponents)
             {
                 components.Add(c.GetType(), c);

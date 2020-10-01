@@ -46,7 +46,6 @@ public class SpriteFlash
         }
     }
 
-
     private class DemoSpriteFlash : MonoBehaviour
     {
         private FloatTween tween;
