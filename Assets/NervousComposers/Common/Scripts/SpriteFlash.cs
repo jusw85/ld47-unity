@@ -16,7 +16,8 @@ public class SpriteFlash
         spriteRenderer.material.SetColor(MATERIAL_FLASHCOLOR_ID, c);
     }
 
-    public static FloatTween CreateTween(SpriteRenderer spriteRenderer, float from, float to, float duration,
+    public static FloatTween CreateOneWayTween(
+        SpriteRenderer spriteRenderer, float from, float to, float duration,
         EaseType easeType = EaseType.QuartIn)
     {
         FloatTween tween = new FloatTween();
@@ -43,32 +44,6 @@ public class SpriteFlash
         public SpriteFlashTweenTarget(SpriteRenderer spriteRenderer)
         {
             _target = spriteRenderer;
-        }
-    }
-
-    private class DemoSpriteFlash : MonoBehaviour
-    {
-        private FloatTween tween;
-
-        private void Start()
-        {
-            SpriteRenderer sr = GetComponent<SpriteRenderer>();
-            tween = CreateTween(sr, 1.0f, 0.0f, 1.0f, EaseType.Linear);
-            tween.start();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.J))
-            {
-                if (tween.isRunning())
-                {
-                    tween.stop(true, true);
-                }
-
-                tween.jumpToElapsedTime(0f);
-                tween.start();
-            }
         }
     }
 }

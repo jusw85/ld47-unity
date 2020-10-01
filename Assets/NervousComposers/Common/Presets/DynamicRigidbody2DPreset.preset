@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rigidbody2DPreset
+  m_Name: DynamicRigidbody2DPreset
   m_TargetType:
     m_NativeTypeID: 50
     m_ManagedTypePPtr: {fileID: 0}
@@ -47,7 +47,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: m_Material
     value: 
-    objectReference: {fileID: 0}
+    objectReference: {fileID: 6200000, guid: d8226d29b331a76708f28c887a71e47a, type: 2}
   - target: {fileID: 0}
     propertyPath: m_Interpolate
     value: 1
