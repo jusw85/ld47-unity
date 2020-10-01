@@ -3,13 +3,10 @@ namespace k
 {
 	public static class Scenes
 	{
-		public const string START = "Start";
-		public const string CRYSTAL_DEFENCE = "CrystalDefence";
+		public const string TEST_SCENE = "TestScene";
 		public const string HUD = "HUD";
-		public const string WIN = "Win";
-		public const string LOSE = "Lose";
 
-		public const int TOTAL_SCENES = 5;
+		public const int TOTAL_SCENES = 2;
 
 
 		public static int nextSceneIndex()

@@ -10,9 +10,7 @@ namespace k
 		public const string MAIN_CAMERA = "MainCamera";
 		public const string PLAYER = "Player";
 		public const string GAME_CONTROLLER = "GameController";
-		public const string HUDMANAGER = "HUDManager";
 		public const string MAIN_GAME = "MainGame";
-		public const string ENEMY = "Enemy";
-		public const string CRYSTAL = "Crystal";
+		public const string HUDMANAGER = "HUDManager";
 	}
 }

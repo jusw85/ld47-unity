@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+ * Fixed y-position camera
+ */
 public class CameraFollow : MonoBehaviour
 {
     public GameObject targetPos;
