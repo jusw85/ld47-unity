@@ -10,8 +10,8 @@ namespace k
 		public const string AUDIO_TAG = "Prefabs/AudioTag";
 		public const string CHARACTER = "Prefabs/Character";
 		public const string CLICKABLE_SPRITE = "Prefabs/ClickableSprite";
-		public const string DRAGGABLE_SPRITE = "Prefabs/DraggableSprite";
 		public const string DRAG_TARGET_SPRITE = "Prefabs/DragTargetSprite";
+		public const string DRAGGABLE_SPRITE = "Prefabs/DraggableSprite";
 		public const string EVENT_SYSTEM = "Prefabs/EventSystem";
 		public const string FLOWCHART = "Prefabs/Flowchart";
 		public const string FUNGUS_LOGO = "Prefabs/FungusLogo";
@@ -46,9 +46,6 @@ namespace k
 		public const string LIBERATION_SANS_SDF___DROP_SHADOW = "Fonts & Materials/LiberationSans SDF - Drop Shadow";
 		public const string LIBERATION_SANS_SDF___OUTLINE = "Fonts & Materials/LiberationSans SDF - Outline";
 		public const string LIBERATION_SANS_SDF = "Fonts & Materials/LiberationSans SDF";
-		public const string TMPRO = "Shaders/TMPro";
-		public const string TMPRO_PROPERTIES = "Shaders/TMPro_Properties";
-		public const string TMPRO_SURFACE = "Shaders/TMPro_Surface";
 		public const string TMP_BITMAP_CUSTOM_ATLAS = "Shaders/TMP_Bitmap-Custom-Atlas";
 		public const string TMP_BITMAP_MOBILE = "Shaders/TMP_Bitmap-Mobile";
 		public const string TMP_BITMAP = "Shaders/TMP_Bitmap";
@@ -60,6 +57,9 @@ namespace k
 		public const string TMP_SDF_SURFACE = "Shaders/TMP_SDF-Surface";
 		public const string TMP_SDF = "Shaders/TMP_SDF";
 		public const string TMP_SPRITE = "Shaders/TMP_Sprite";
+		public const string TMPRO = "Shaders/TMPro";
+		public const string TMPRO_PROPERTIES = "Shaders/TMPro_Properties";
+		public const string TMPRO_SURFACE = "Shaders/TMPro_Surface";
 		public const string EMOJI_ONE = "Sprite Assets/EmojiOne";
 		public const string DEFAULT_STYLE_SHEET = "Style Sheets/Default Style Sheet";
 	}

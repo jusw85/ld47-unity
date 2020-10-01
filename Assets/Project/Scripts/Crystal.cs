@@ -14,6 +14,7 @@ public class Crystal : MonoBehaviour
 
     private FloatTween tween;
     private FlashTweenTarget tweenTarget;
+
     private void Awake()
     {
         rend = GetComponent<SpriteRenderer>();
@@ -55,16 +56,16 @@ public class Crystal : MonoBehaviour
         {
             // Debug.Log("Crystal: touched");
             hudManager?.SetHealth(--health);
-            
+
             if (tween.isRunning()) tween.stop(true, true);
-            tween.initialize(tweenTarget, 0f, 0.1f); 
+            tween.initialize(tweenTarget, 0f, 0.1f);
             tween.setFrom(0.5f).start();
-            
+
             if (health <= 0)
             {
                 //StartCoroutine(CoroutineUtils.DelaySeconds(() =>
-               // {
-                    //rend.ZKalphaTo(0, 1).start();
+                // {
+                //rend.ZKalphaTo(0, 1).start();
                 //}, 2));
                 anim.SetTrigger(AnimatorParams.DIE);
                 GameObject.FindWithTag(Tags.MAIN_GAME)?.GetComponent<MainGame>()?.Lose();
@@ -82,11 +83,11 @@ public class Crystal : MonoBehaviour
         get => isEnding;
         set => isEnding = value;
     }
-    
+
     public class FlashTweenTarget : AbstractTweenTarget<SpriteRenderer, float>
     {
         public static readonly int MATERIAL_FLASHAMOUNT_ID = Shader.PropertyToID("_FlashAmount");
-        
+
         public override void setTweenedValue(float value)
         {
             _target.material.SetFloat(MATERIAL_FLASHAMOUNT_ID, value);
