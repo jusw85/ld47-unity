@@ -793,8 +793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c28fd8d5d92980c85709bbee6b5242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpAudio: {fileID: 0}
-  slashAudio: {fileID: 0}
+  jumpAudio: {fileID: 11400000, guid: 41369bfa84947eab2950c6f5be4dd6db, type: 2}
+  slashAudio: {fileID: 11400000, guid: fd5e07822b3b482ef941a6145e85a7df, type: 2}
   horizontalDeadzone: 0.2
   verticalDeadzone: 0.2
   animator: {fileID: 1598954496}
@@ -810,7 +810,7 @@ Animator:
   m_GameObject: {fileID: 1598954488}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f186025127eef8b1b1ea33630f075e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
