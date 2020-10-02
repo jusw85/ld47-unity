@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using Jusw85.Common;
 using k;
+using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +22,18 @@ public class MainGame : MonoBehaviour
             SceneManager.LoadScene(Scenes.START, LoadSceneMode.Additive);
             return;
         }
+
+        Scene uiScene = SceneManager.GetSceneByName(Scenes.UI);
+        if (uiScene.isLoaded)
+        {
+            UiLoaded();
+        }
+
+        Scene level1Scene = SceneManager.GetSceneByName(Scenes.LEVEL1);
+        if (level1Scene.isLoaded)
+        {
+            Level1Loaded();
+        }
     }
 
     public void ExitStart()
@@ -30,15 +44,16 @@ public class MainGame : MonoBehaviour
     private IEnumerator ExitStartCoroutine()
     {
         yield return SceneManager.UnloadSceneAsync(Scenes.START);
-        SceneManager.LoadScene(Scenes.UI, LoadSceneMode.Additive);
+
+        TryLoadSceneAdditive(Scenes.UI);
         yield return null;
-        hudManager = GameObject.FindWithTag(Tags.HUDMANAGER)?.GetComponent<HUDManager>();
-        SceneManager.LoadScene(Scenes.LEVEL1, LoadSceneMode.Additive);
+        UiLoaded();
+
+        TryLoadSceneAdditive(Scenes.LEVEL1);
         yield return null;
-        Scene level1 = SceneManager.GetSceneByName(Scenes.LEVEL1);
-        SceneManager.SetActiveScene(level1);
+        Level1Loaded();
     }
-    
+
     private void TryLoadSceneAdditive(string name)
     {
         Scene scene = SceneManager.GetSceneByName(name);
@@ -47,7 +62,23 @@ public class MainGame : MonoBehaviour
             SceneManager.LoadScene(name, LoadSceneMode.Additive);
         }
     }
-    
+
+    private void UiLoaded()
+    {
+        hudManager = GameObject.FindWithTag(Tags.HUDMANAGER)?.GetComponent<HUDManager>();
+        if (hudManager == null)
+        {
+            Debug.LogError("Unable to find HudManager!");
+        }
+    }
+
+    private void Level1Loaded()
+    {
+        Scene level1 = SceneManager.GetSceneByName(Scenes.LEVEL1);
+        SceneManager.SetActiveScene(level1);
+    }
+
+
     private IEnumerator ExitStartCoroutine1()
     {
         yield return SceneManager.UnloadSceneAsync(Scenes.START);
@@ -55,7 +86,7 @@ public class MainGame : MonoBehaviour
         AsyncOperation op3 = SceneManager.LoadSceneAsync(Scenes.LEVEL1, LoadSceneMode.Additive);
         op2.allowSceneActivation = false;
         op3.allowSceneActivation = false;
-        
+
         while (!(op2.isDone && op3.isDone))
         {
             if (op2.progress >= 0.9f && op3.progress >= 0.9f)
@@ -63,11 +94,11 @@ public class MainGame : MonoBehaviour
                 op2.allowSceneActivation = true;
                 op3.allowSceneActivation = true;
             }
-        
+
             yield return null;
         }
     }
-    
+
     public void ExitStart1()
     {
         AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(Scenes.START);
