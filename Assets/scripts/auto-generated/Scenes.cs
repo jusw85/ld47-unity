@@ -6,8 +6,9 @@ namespace k
 		public const string MAIN = "Main";
 		public const string UI = "UI";
 		public const string LEVEL1 = "Level1";
+		public const string START = "Start";
 
-		public const int TOTAL_SCENES = 3;
+		public const int TOTAL_SCENES = 4;
 
 
 		public static int nextSceneIndex()
