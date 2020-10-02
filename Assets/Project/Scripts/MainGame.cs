@@ -11,35 +11,85 @@ using UnityEngine.SceneManagement;
 public class MainGame : MonoBehaviour
 {
     private HUDManager hudManager;
+    // [SerializeField] [ConstantsSelection(typeof(Scenes))] private string selectedScene;
 
     private void Start()
     {
-        IEnumerator loadHud = CoroutineUtils.Chain(this,
-            CoroutineUtils.Do(() => { TryLoadSceneAdditive(Scenes.UI); }),
-            CoroutineUtils.Do(() =>
-            {
-                hudManager = GameObject.FindWithTag(Tags.HUDMANAGER)?.GetComponent<HUDManager>();
-            }),
-            CoroutineUtils.Do(() => { TryLoadSceneAdditive(Scenes.LEVEL1); }),
-            CoroutineUtils.Do(() =>
-            {
-                Scene level1 = SceneManager.GetSceneByName(Scenes.LEVEL1);
-                SceneManager.SetActiveScene(level1);
-            })
-        );
-
-        StartCoroutine(loadHud);
+        if (!Application.isEditor)
+        {
+            SceneManager.LoadScene(Scenes.START, LoadSceneMode.Additive);
+            return;
+        }
     }
 
+    public void ExitStart()
+    {
+        StartCoroutine(ExitStartCoroutine());
+    }
+
+    private IEnumerator ExitStartCoroutine()
+    {
+        yield return SceneManager.UnloadSceneAsync(Scenes.START);
+        SceneManager.LoadScene(Scenes.UI, LoadSceneMode.Additive);
+        yield return null;
+        hudManager = GameObject.FindWithTag(Tags.HUDMANAGER)?.GetComponent<HUDManager>();
+        SceneManager.LoadScene(Scenes.LEVEL1, LoadSceneMode.Additive);
+        yield return null;
+        Scene level1 = SceneManager.GetSceneByName(Scenes.LEVEL1);
+        SceneManager.SetActiveScene(level1);
+    }
+    
     private void TryLoadSceneAdditive(string name)
     {
-        Scene hudScene = SceneManager.GetSceneByName(name);
-        if (!(Application.isEditor && hudScene.isLoaded))
+        Scene scene = SceneManager.GetSceneByName(name);
+        if (!(Application.isEditor && scene.isLoaded))
         {
             SceneManager.LoadScene(name, LoadSceneMode.Additive);
         }
     }
+    
+    private IEnumerator ExitStartCoroutine1()
+    {
+        yield return SceneManager.UnloadSceneAsync(Scenes.START);
+        AsyncOperation op2 = SceneManager.LoadSceneAsync(Scenes.UI, LoadSceneMode.Additive);
+        AsyncOperation op3 = SceneManager.LoadSceneAsync(Scenes.LEVEL1, LoadSceneMode.Additive);
+        op2.allowSceneActivation = false;
+        op3.allowSceneActivation = false;
+        
+        while (!(op2.isDone && op3.isDone))
+        {
+            if (op2.progress >= 0.9f && op3.progress >= 0.9f)
+            {
+                op2.allowSceneActivation = true;
+                op3.allowSceneActivation = true;
+            }
+        
+            yield return null;
+        }
+    }
+    
+    public void ExitStart1()
+    {
+        AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(Scenes.START);
+        asyncOperation.completed += (arg) =>
+        {
+            IEnumerator loadLevel = CoroutineUtils.Chain(this,
+                CoroutineUtils.Do(() => { TryLoadSceneAdditive(Scenes.UI); }),
+                CoroutineUtils.Do(() =>
+                {
+                    hudManager = GameObject.FindWithTag(Tags.HUDMANAGER)?.GetComponent<HUDManager>();
+                }),
+                CoroutineUtils.Do(() => { TryLoadSceneAdditive(Scenes.LEVEL1); }),
+                CoroutineUtils.Do(() =>
+                {
+                    Scene level1 = SceneManager.GetSceneByName(Scenes.LEVEL1);
+                    SceneManager.SetActiveScene(level1);
+                })
+            );
 
+            StartCoroutine(loadLevel);
+        };
+    }
 
     // [SerializeField] private AudioClip bgm;
     // private HUDManager hudManager;
