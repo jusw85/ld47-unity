@@ -3,10 +3,11 @@ namespace k
 {
 	public static class Scenes
 	{
+		public const string MAIN = "Main";
+		public const string UI = "UI";
 		public const string LEVEL1 = "Level1";
-		public const string HUD = "HUD";
 
-		public const int TOTAL_SCENES = 2;
+		public const int TOTAL_SCENES = 3;
 
 
 		public static int nextSceneIndex()
