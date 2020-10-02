@@ -33,7 +33,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Start()
     {
-        soundKit = Toolbox.Instance.Get<SoundKit>();
+        soundKit = Toolbox.Instance.TryGet<SoundKit>();
         platformController.IsJumpingThisFrameCallback += () =>
         {
             isJumping = true;

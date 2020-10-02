@@ -30,7 +30,7 @@ namespace Jusw85.Common
             }
         }
 
-        public T Get<T>() where T : Component
+        public T TryGet<T>() where T : Component
         {
             Component c;
             components.TryGetValue(typeof(T), out c);

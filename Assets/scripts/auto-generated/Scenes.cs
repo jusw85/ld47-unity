@@ -3,7 +3,7 @@ namespace k
 {
 	public static class Scenes
 	{
-		public const string TEST_SCENE = "TestScene";
+		public const string LEVEL1 = "Level1";
 		public const string HUD = "HUD";
 
 		public const int TOTAL_SCENES = 2;

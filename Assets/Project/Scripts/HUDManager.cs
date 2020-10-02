@@ -22,6 +22,7 @@ public class HUDManager : MonoBehaviour
 
     public void Win()
     {
+        youwin.gameObject.SetActive(true);
         StartCoroutine(CoroutineUtils.DelaySeconds(() =>
         {
             IntTween tween = new IntTween();
@@ -32,6 +33,7 @@ public class HUDManager : MonoBehaviour
     
     public void Lose()
     {
+        youlose.gameObject.SetActive(true);
         StartCoroutine(CoroutineUtils.DelaySeconds(() =>
         {
             IntTween tween = new IntTween();
