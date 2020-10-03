@@ -1,4 +1,4 @@
-# Ludum Dare 47 - Theme: TBD
+# Ludum Dare 47 - Theme: Stuck in a loop
 Ludum Dare 47 in Unity
 
 Title: -

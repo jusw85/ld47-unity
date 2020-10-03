@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SissyphusMovement : MonoBehaviour
 {
@@ -15,9 +13,14 @@ public class SissyphusMovement : MonoBehaviour
     private void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        Vector2 velocity = rb2d.velocity; 
+        Vector2 velocity = rb2d.velocity;
         velocity.x = moveInput.x * moveSpeed;
+        if (moveInput.x == 0f && velocity.y > 0)
+        {
+            velocity.y = 0f;
+        }
+
+        // Debug.Log(velocity);
         rb2d.velocity = velocity;
     }
 }
