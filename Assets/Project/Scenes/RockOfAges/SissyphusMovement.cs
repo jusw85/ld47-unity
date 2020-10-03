@@ -12,6 +12,7 @@ public class SissyphusMovement : MonoBehaviour
     private float moveSpeed;
     private Rigidbody2D rb2d;
     private float initialY = -3f;
+    float buttonBoost;
 
     private SoundKit soundkit;
     [SerializeField] private AudioEvent gruntAudio;
@@ -28,12 +29,16 @@ public class SissyphusMovement : MonoBehaviour
     private void Update()
     {
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
+        buttonBoost -= 1.0f * Time.deltaTime;
+        
         if (Input.GetButtonDown("Fire1"))
         {
-            // float buttonBoost = 
+            buttonBoost += 0.5f;
         }
-
-        float newMoveSpeed = initialMoveSpeed - heightDampening;
+        
+        heightDampening = Mathf.Clamp(heightDampening, heightDampening, 10f);
+        buttonBoost = Mathf.Clamp(buttonBoost, 0f, 10f);
+        float newMoveSpeed = initialMoveSpeed + buttonBoost - heightDampening;
         moveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, initialMoveSpeed);
 
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
