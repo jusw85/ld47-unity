@@ -22,6 +22,7 @@ public class CameraFollow : MonoBehaviour
 //        Debug.Log(targetPos);
         Vector3 pos = transform.position;
         pos.x = targetPos.transform.position.x;
+        pos.y = targetPos.transform.position.y;
         // pos += offset;arget
         transform.position = pos;
     }
