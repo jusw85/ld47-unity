@@ -277,6 +277,88 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &409323352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409323353}
+  - component: {fileID: 409323355}
+  - component: {fileID: 409323354}
+  - component: {fileID: 409323356}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409323353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409323352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409323354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409323352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ea59e97987e47d98a2c33d1111f92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _persistent: 0
+  trackedComponents:
+  - {fileID: 409323355}
+--- !u!114 &409323355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409323352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd640f00f5c6420ab98d0d68542091d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffectVolume: 1
+  bgmVolume: 1
+  initialCapacity: 10
+  maxCapacity: 15
+  clearAllAudioClipsOnLevelLoad: 0
+  bgmGroup: {fileID: -6244541035922040950, guid: a87fcb9cb4d06bfa0ba5792f81e7d550,
+    type: 2}
+  sfxGroup: {fileID: -1841746113462652141, guid: a87fcb9cb4d06bfa0ba5792f81e7d550,
+    type: 2}
+--- !u!114 &409323356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409323352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7458fea6db1740c492146030c34e4373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: {fileID: 8300000, guid: f80f0100cd297b90fa12f7e22e8bde92, type: 3}
 --- !u!1 &471313047
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +653,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878366978267998884, guid: 4d3304f67284eb54dbc7a31e81a58d83,
+        type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878366978267998884, guid: 4d3304f67284eb54dbc7a31e81a58d83,
+        type: 3}
+      propertyPath: m_DetectChunkCullingBounds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878366978267998884, guid: 4d3304f67284eb54dbc7a31e81a58d83,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878366978267998884, guid: 4d3304f67284eb54dbc7a31e81a58d83,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 5415026757872637604, guid: 4d3304f67284eb54dbc7a31e81a58d83,
         type: 3}
