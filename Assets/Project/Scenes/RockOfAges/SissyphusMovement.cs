@@ -4,8 +4,8 @@ public class SissyphusMovement : MonoBehaviour
 {
     [SerializeField] private float initialMoveSpeed = 5f;
     [SerializeField] private float minMoveSpeed = 2f;
-    [SerializeField] private float heightDampening = 0.5f;
-    
+    [SerializeField] private float heightDampeningFactor = 0.5f;
+
     private float moveSpeed;
     private Rigidbody2D rb2d;
     private float initialY = -3f;
@@ -17,9 +17,14 @@ public class SissyphusMovement : MonoBehaviour
 
     private void Update()
     {
-        float newMoveSpeed = initialMoveSpeed - ((transform.position.y - initialY) * heightDampening);
+        float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            // float buttonBoost = 
+        }
+        float newMoveSpeed = initialMoveSpeed - heightDampening;
         moveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, initialMoveSpeed);
-            
+
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         Vector2 velocity = rb2d.velocity;
         velocity.x = moveInput.x * moveSpeed;

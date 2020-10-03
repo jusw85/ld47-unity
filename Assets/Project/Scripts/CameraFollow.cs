@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
         Vector3 pos = transform.position;
         pos.x = targetPos.transform.position.x;
         pos.y = targetPos.transform.position.y;
-        // pos += offset;arget
+        pos += offset;
         transform.position = pos;
     }
 
@@ -34,6 +34,6 @@ public class CameraFollow : MonoBehaviour
 
     private void UpdateOffset()
     {
-        offset = new Vector3(offsetX, offsetY, -10);
+        offset = new Vector3(offsetX, offsetY, 0f);
     }
 }
