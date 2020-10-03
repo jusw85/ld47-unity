@@ -258,6 +258,10 @@ MonoBehaviour:
   initialMoveSpeed: 10
   minMoveSpeed: 2
   heightDampeningFactor: 0.5
+  gruntAudio: {fileID: 11400000, guid: 5481ce0b282d7388d8069d209aea236d, type: 2}
+  gruntInterval:
+    Min: 1.4819276
+    Max: 2.9156625
 --- !u!95 &312991182
 Animator:
   serializedVersion: 3

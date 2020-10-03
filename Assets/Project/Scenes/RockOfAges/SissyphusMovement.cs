@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using Jusw85.Common;
+using MyBox;
+using Prime31;
+using UnityEngine;
 
 public class SissyphusMovement : MonoBehaviour
 {
@@ -10,9 +13,16 @@ public class SissyphusMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private float initialY = -3f;
 
+    private SoundKit soundkit;
+    [SerializeField] private AudioEvent gruntAudio;
+    [SerializeField] [MinMaxRange(1, 10)] private RangedFloat gruntInterval = new RangedFloat(2, 3);
+    private float currentGruntInterval;
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        soundkit = Toolbox.Instance.TryGet<SoundKit>();
+        currentGruntInterval = Random.Range(gruntInterval.Min, gruntInterval.Max);
     }
 
     private void Update()
@@ -22,6 +32,7 @@ public class SissyphusMovement : MonoBehaviour
         {
             // float buttonBoost = 
         }
+
         float newMoveSpeed = initialMoveSpeed - heightDampening;
         moveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, initialMoveSpeed);
 
@@ -31,6 +42,16 @@ public class SissyphusMovement : MonoBehaviour
         if (moveInput.x == 0f && velocity.y > 0)
         {
             velocity.y = 0f;
+        }
+
+        if (moveInput.x > 0)
+        {
+            currentGruntInterval -= Time.deltaTime;
+            if (currentGruntInterval <= 0)
+            {
+                currentGruntInterval = Random.Range(gruntInterval.Min, gruntInterval.Max);
+                gruntAudio.Play(soundkit);
+            }
         }
 
         rb2d.velocity = velocity;
