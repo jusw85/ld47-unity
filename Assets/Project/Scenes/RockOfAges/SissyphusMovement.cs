@@ -19,17 +19,29 @@ public class SissyphusMovement : MonoBehaviour
     [SerializeField] [MinMaxRange(1, 10)] private RangedFloat gruntInterval = new RangedFloat(2, 3);
     private float currentGruntInterval;
 
+    // https://github.com/TwoTailsGames/Unity-Built-in-Shaders/blob/master/DefaultResourcesExtra/Skybox-Procedural.shader
+    private Material skyboxMaterial;
+    [SerializeField] private AnimationCurve skyboxYCurve;
+    
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         soundkit = Toolbox.Instance.TryGet<SoundKit>();
         currentGruntInterval = Random.Range(gruntInterval.Min, gruntInterval.Max);
+        skyboxMaterial = RenderSettings.skybox;
     }
 
     private void Update()
     {
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
         buttonBoost -= 1.0f * Time.deltaTime;
+        
+        float atmosphereThickness = skyboxYCurve.Evaluate(transform.position.y);
+        atmosphereThickness = Mathf.Clamp(atmosphereThickness, 0f, 5f);
+        skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness);
+        // float atmosphereThickness = skyboxMaterial.GetFloat("_AtmosphereThickness");
+        // atmosphereThickness = Mathf.Clamp(atmosphereThickness, 0f, 5f);
+        // skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness + 0.1f);
         
         if (Input.GetButtonDown("Fire1"))
         {
