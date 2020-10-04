@@ -445,7 +445,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b40fc0f65c85f14fbc9c7c5f40ca686, type: 3}
+  m_Sprite: {fileID: 5342237233013902435, guid: 162cce8001546bfa381af6f2f61cc1bf,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -464,7 +465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312991176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.22, y: -1.892, z: -8.737671}
+  m_LocalPosition: {x: -13.49, y: -0.78, z: -8.737671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -483,8 +484,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.58918786, y: -0.54205275}
-  m_Size: {x: 1.3487988, y: 2.0841055}
+  m_Offset: {x: 0.31047964, y: -0.3898015}
+  m_Size: {x: 0.9889326, y: 1.9854865}
   m_Direction: 0
 --- !u!114 &312991181
 MonoBehaviour:
@@ -501,6 +502,7 @@ MonoBehaviour:
   initialMoveSpeed: 10
   minMoveSpeed: 2
   heightDampeningFactor: 0.5
+  animator: {fileID: 0}
   gruntAudio: {fileID: 11400000, guid: 5481ce0b282d7388d8069d209aea236d, type: 2}
   gruntInterval:
     Min: 1.4819276
@@ -511,17 +513,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: -2.6426187
       value: 0.7918055
-      inSlope: 0.188207
-      outSlope: 0.188207
+      inSlope: 0.041973345
+      outSlope: 0.041973345
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
+      time: 16.799591
+      value: 1.6078601
+      inSlope: 0.06509752
+      outSlope: 0.06509752
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.056858774
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 18.686092
+      value: 4.6099863
+      inSlope: 0.09830899
+      outSlope: 0.09830899
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050546233
+      outWeight: 0.8059896
+    - serializedVersion: 3
       time: 20.344893
       value: 5.118216
-      inSlope: 0.188207
-      outSlope: 0.188207
+      inSlope: 0.30638394
+      outSlope: 0.30638394
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1141,7 +1161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b40fc0f65c85f14fbc9c7c5f40ca686, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fee26b600360dbd7f94d79cbae8906d2, type: 3}
   m_Color: {r: 0.509434, g: 0.11053755, b: 0.11053755, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1160,7 +1180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499141739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.09, y: -0.69, z: -8.737671}
+  m_LocalPosition: {x: -3.39, y: -1.52, z: -8.737671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1179,9 +1199,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.067135215, y: 0}
+  m_Offset: {x: -0.008938789, y: 0}
   serializedVersion: 2
-  m_Radius: 0.50000006
+  m_Radius: 1.4889598
 --- !u!1 &503465477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: 4440591747063787741, guid: eaa4982730ebb1f62aa394b0f2fb68dd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.89
       objectReference: {fileID: 0}
     - target: {fileID: 4440591747063787741, guid: eaa4982730ebb1f62aa394b0f2fb68dd,
         type: 3}
@@ -1741,7 +1761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688538333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: -7.87, y: -4, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

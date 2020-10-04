@@ -1,4 +1,5 @@
 ﻿using Jusw85.Common;
+using k;
 using MyBox;
 using Prime31;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class SissyphusMovement : MonoBehaviour
     float buttonBoost;
 
     private SoundKit soundkit;
+    [SerializeField, HideInInspector] private Animator animator;
     [SerializeField] private AudioEvent gruntAudio;
     [SerializeField] [MinMaxRange(1, 10)] private RangedFloat gruntInterval = new RangedFloat(2, 3);
     private float currentGruntInterval;
@@ -25,6 +27,7 @@ public class SissyphusMovement : MonoBehaviour
     
     private void Start()
     {
+        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         soundkit = Toolbox.Instance.TryGet<SoundKit>();
         currentGruntInterval = Random.Range(gruntInterval.Min, gruntInterval.Max);
@@ -71,6 +74,26 @@ public class SissyphusMovement : MonoBehaviour
             }
         }
 
+        
+        if (!Mathf.Approximately(moveInput.x, 0))
+        {
+            SetIsFacingRight(moveInput.x > 0);
+        }
+        animator.SetBool(AnimatorParams.IS_WALKING, Mathf.Abs(velocity.x) > 0);
         rb2d.velocity = velocity;
+    }
+    
+    private bool isFacingRight = true;
+    public bool IsFacingRight => isFacingRight;
+    private void SetIsFacingRight(bool isFacingRight)
+    {
+        if (this.isFacingRight ^ isFacingRight)
+        {
+            var scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
+
+        this.isFacingRight = isFacingRight;
     }
 }

@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 162cce8001546bfa381af6f2f61cc1bf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5821946283697032760
+    second: sisyphus-walk_0
+  - first:
+      213: 5342237233013902435
+    second: sisyphus-walk_1
+  - first:
+      213: 4766592638683637178
+    second: sisyphus-walk_2
+  - first:
+      213: -2398243794324241897
+    second: sisyphus-walk_3
+  - first:
+      213: 7522067290375850241
+    second: sisyphus-walk_4
+  - first:
+      213: 3080052521439024678
+    second: sisyphus-walk_5
+  - first:
+      213: 5802508272482534723
+    second: sisyphus-walk_6
+  - first:
+      213: 2303294791600345762
+    second: sisyphus-walk_7
+  - first:
+      213: 4228716074164487168
+    second: sisyphus-walk_8
+  - first:
+      213: -5438547660786777482
+    second: sisyphus-walk_9
+  - first:
+      213: -4788245982603630409
+    second: sisyphus-walk_10
+  - first:
+      213: 447577690943959391
+    second: sisyphus-walk_11
+  - first:
+      213: 2658264977549987888
+    second: sisyphus-walk_12
+  - first:
+      213: -8104224797340048464
+    second: sisyphus-walk_13
+  - first:
+      213: 31643736295516688
+    second: sisyphus-walk_14
+  - first:
+      213: 3162502376362025440
+    second: sisyphus-walk_15
+  - first:
+      213: 499570853929902094
+    second: sisyphus-walk_16
+  - first:
+      213: 1832652504149811348
+    second: sisyphus-walk_17
+  - first:
+      213: -8626125933770696874
+    second: sisyphus-walk_18
+  - first:
+      213: -727775294721204169
+    second: sisyphus-walk_19
+  - first:
+      213: -6354720066336107454
+    second: sisyphus-walk_20
+  - first:
+      213: 8459205970678530506
+    second: sisyphus-walk_21
+  - first:
+      213: 6154607954147437662
+    second: sisyphus-walk_22
+  - first:
+      213: -7862314188120135745
+    second: sisyphus-walk_23
+  - first:
+      213: -225790042689337531
+    second: sisyphus-walk_24
+  - first:
+      213: -6822843474061981203
+    second: sisyphus-walk_25
+  - first:
+      213: -6744870502811703030
+    second: sisyphus-walk_26
+  - first:
+      213: 3221647484827590310
+    second: sisyphus-walk_27
+  - first:
+      213: -6962727032882790080
+    second: sisyphus-walk_28
+  - first:
+      213: 7026566407396433214
+    second: sisyphus-walk_29
+  - first:
+      213: 4207073973643858086
+    second: sisyphus-walk_30
+  - first:
+      213: -2083703622719538675
+    second: sisyphus-walk_31
+  - first:
+      213: -4094020848615533928
+    second: sisyphus-walk_32
+  - first:
+      213: -5411022776360053778
+    second: sisyphus-walk_33
+  - first:
+      213: 2799414411567808365
+    second: sisyphus-walk_34
+  - first:
+      213: 7629721959613162221
+    second: sisyphus-walk_35
+  - first:
+      213: -7988055510191807713
+    second: sisyphus-walk_36
+  - first:
+      213: -3248744919378107895
+    second: sisyphus-walk_37
+  - first:
+      213: 7347894611605876838
+    second: sisyphus-walk_38
+  - first:
+      213: -7397509789960751966
+    second: sisyphus-walk_39
+  - first:
+      213: -5736128466342165574
+    second: sisyphus-walk_40
+  - first:
+      213: 49487943127786748
+    second: sisyphus-walk_41
+  - first:
+      213: -3469550836612476608
+    second: sisyphus-walk_42
+  - first:
+      213: 8118901640989360600
+    second: sisyphus-walk_43
+  - first:
+      213: -4650793848331952945
+    second: sisyphus-walk_44
+  - first:
+      213: -2285354601519311584
+    second: sisyphus-walk_45
+  - first:
+      213: -5670684161931763007
+    second: sisyphus-walk_46
+  - first:
+      213: -206744541840996387
+    second: sisyphus-walk_47
+  - first:
+      213: 3735722576204908193
+    second: sisyphus-walk_48
+  - first:
+      213: 9108812554284888491
+    second: sisyphus-walk_49
+  - first:
+      213: -6470275345099467733
+    second: sisyphus-walk_50
+  - first:
+      213: -4640664980031213929
+    second: sisyphus-walk_51
+  - first:
+      213: 153198612508060824
+    second: sisyphus-walk_52
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sisyphus-walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eca2d8c45bbc050800000000000000
+      internalID: 5821946283697032760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_1
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cc8a38570732a40800000000000000
+      internalID: 5342237233013902435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_2
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5eab910c6562240800000000000000
+      internalID: 4766592638683637178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_3
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712c48ab9f9b7bed0800000000000000
+      internalID: -2398243794324241897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_4
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1090073d850c36860800000000000000
+      internalID: 7522067290375850241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_5
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6265bed037b8eba20800000000000000
+      internalID: 3080052521439024678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_6
+      rect:
+        serializedVersion: 2
+        x: 4356
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3454693e786a68050800000000000000
+      internalID: 5802508272482534723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_7
+      rect:
+        serializedVersion: 2
+        x: 5082
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2985ad862f6ff10800000000000000
+      internalID: 2303294791600345762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_8
+      rect:
+        serializedVersion: 2
+        x: 5808
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0040f806dda6faa30800000000000000
+      internalID: 4228716074164487168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_9
+      rect:
+        serializedVersion: 2
+        x: 6534
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672c5c897b56684b0800000000000000
+      internalID: -5438547660786777482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_10
+      rect:
+        serializedVersion: 2
+        x: 7260
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b828b5e5abbc8db0800000000000000
+      internalID: -4788245982603630409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-walk_11
+      rect:
+        serializedVersion: 2
+        x: 7986
+        y: 0
+        width: 726
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51ba1ed98d163600800000000000000
+      internalID: 447577690943959391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
