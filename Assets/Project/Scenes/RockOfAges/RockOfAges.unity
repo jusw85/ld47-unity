@@ -283,6 +283,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &206637347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206637348}
+  - component: {fileID: 206637349}
+  m_Layer: 0
+  m_Name: RockTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206637348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206637347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.54, y: 0.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 312991179}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &206637349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206637347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3185675, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36286497, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &246709703
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +435,7 @@ GameObject:
   - component: {fileID: 312991180}
   - component: {fileID: 312991181}
   - component: {fileID: 312991182}
+  - component: {fileID: 312991183}
   m_Layer: 0
   m_Name: Sissyphus
   m_TagString: Untagged
@@ -465,9 +523,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312991176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.49, y: -0.78, z: -8.737671}
+  m_LocalPosition: {x: -7.55, y: -2.26, z: -8.737671}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 206637348}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -484,8 +543,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.31047964, y: -0.3898015}
-  m_Size: {x: 0.9889326, y: 1.9854865}
+  m_Offset: {x: 0.07805157, y: -0.24676895}
+  m_Size: {x: 0.52407646, y: 1.6994214}
   m_Direction: 0
 --- !u!114 &312991181
 MonoBehaviour:
@@ -499,9 +558,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b53d0bcd745e6fa3962061d046b83ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialMoveSpeed: 10
+  initialMoveSpeed: 3
   minMoveSpeed: 2
   heightDampeningFactor: 0.5
+  rockTestCollider: {fileID: 206637349}
+  rockCollider: {fileID: 499141743}
+  raycaster: {fileID: 0}
   animator: {fileID: 0}
   gruntAudio: {fileID: 11400000, guid: 5481ce0b282d7388d8069d209aea236d, type: 2}
   gruntInterval:
@@ -568,6 +630,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &312991183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312991176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7746cb4e6d54198193b4b84cf302070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMask:
+    serializedVersion: 2
+    m_Bits: 1
+  horizontalRayCount: 3
+  verticalRayCount: 3
+  skinWidth: 0.05
 --- !u!1 &331050667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1711,7 @@ PrefabInstance:
     - target: {fileID: 4440591747063787741, guid: eaa4982730ebb1f62aa394b0f2fb68dd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.89
+      value: -22.19
       objectReference: {fileID: 0}
     - target: {fileID: 4440591747063787741, guid: eaa4982730ebb1f62aa394b0f2fb68dd,
         type: 3}
@@ -1762,7 +1842,7 @@ Transform:
   m_GameObject: {fileID: 688538333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.87, y: -4, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 1}
+  m_LocalScale: {x: 74.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

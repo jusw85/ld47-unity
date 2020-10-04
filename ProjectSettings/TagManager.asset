@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainGame
   - HUDManager
+  - Rock
   layers:
   - Default
   - TransparentFX

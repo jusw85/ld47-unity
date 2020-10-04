@@ -12,5 +12,6 @@ namespace k
 		public const string GAME_CONTROLLER = "GameController";
 		public const string MAIN_GAME = "MainGame";
 		public const string HUDMANAGER = "HUDManager";
+		public const string ROCK = "Rock";
 	}
 }
