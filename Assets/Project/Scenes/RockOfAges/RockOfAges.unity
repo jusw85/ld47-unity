@@ -564,7 +564,7 @@ MonoBehaviour:
   rockTestCollider: {fileID: 206637349}
   rockCollider: {fileID: 499141743}
   rockRotation: {fileID: 499141744}
-  buttonBoostValue: 1
+  buttonBoostValue: 0.5
   raycaster: {fileID: 0}
   animator: {fileID: 0}
   gruntAudio: {fileID: 11400000, guid: 5481ce0b282d7388d8069d209aea236d, type: 2}
@@ -1177,6 +1177,7 @@ GameObject:
   - component: {fileID: 499141740}
   - component: {fileID: 499141743}
   - component: {fileID: 499141744}
+  - component: {fileID: 499141745}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Rock
@@ -1297,6 +1298,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30245f91cd383f4b92e355f5343ecd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &499141745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499141739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a546978a667c291a03c064d3802e8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHorizontalVelocity: 2
+  rb2d: {fileID: 0}
 --- !u!1 &503465477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,7 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa63c7e920d43457cbbe3c4d79657801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newMass: 10
+  newMass: 4
 --- !u!114 &1408092818
 MonoBehaviour:
   m_ObjectHideFlags: 0
