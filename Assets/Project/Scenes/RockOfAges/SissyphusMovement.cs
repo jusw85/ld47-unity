@@ -11,6 +11,7 @@ public class SissyphusMovement : MonoBehaviour
     [SerializeField] private float heightDampeningFactor = 0.5f;
     [SerializeField] private Collider2D rockTestCollider;
     [SerializeField] private Collider2D rockCollider;
+    [SerializeField] private RockRotation rockRotation;
 
     private float moveSpeed;
     private Rigidbody2D rb2d;
@@ -44,6 +45,10 @@ public class SissyphusMovement : MonoBehaviour
         if (!isPushingRock)
         {
             moveSpeed = 3;
+        }
+        else
+        {
+            rockRotation.RotateTransform();
         }
         
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
