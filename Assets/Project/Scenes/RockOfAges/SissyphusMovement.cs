@@ -12,6 +12,7 @@ public class SissyphusMovement : MonoBehaviour
     [SerializeField] private Collider2D rockTestCollider;
     [SerializeField] private Collider2D rockCollider;
     [SerializeField] private RockRotation rockRotation;
+    [SerializeField] private float buttonBoostValue = 0.5f;
 
     private float moveSpeed;
     private Rigidbody2D rb2d;
@@ -59,7 +60,7 @@ public class SissyphusMovement : MonoBehaviour
         skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness);
         if (Input.GetButtonDown("Fire1"))
         {
-            buttonBoost += 0.5f;
+            buttonBoost += buttonBoostValue;
         }
 
         heightDampening = Mathf.Clamp(heightDampening, heightDampening, 10f);
@@ -117,5 +118,11 @@ public class SissyphusMovement : MonoBehaviour
         }
 
         this.isFacingRight = isFacingRight;
+    }
+
+    public float ButtonBoost
+    {
+        get => buttonBoost;
+        set => buttonBoost = value;
     }
 }
