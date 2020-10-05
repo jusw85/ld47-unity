@@ -6,15 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Project/Scenes/Main.unity
-    guid: c75d0523669d9729c991ac6ec533fd83
+    path: Assets/Project/Scenes/RockOfAges/RockOfAges.unity
+    guid: 4bfdbf7e8ec77817a9b3887adc581472
   - enabled: 1
-    path: Assets/Project/Scenes/UI.unity
-    guid: a28d95059fc4adcb2bcc47de4f9613a5
-  - enabled: 1
-    path: Assets/Project/Scenes/Level1.unity
-    guid: 1c565013e751295ffa00de6287bbadcf
-  - enabled: 1
-    path: Assets/Project/Scenes/Start/Start.unity
-    guid: 7e6780f7b9988e7bfa2f8f9c717dc4fb
+    path: Assets/Project/Scenes/RockOfAges/Effects.unity
+    guid: be96af111ddb0c04d802f3ccc5597797
   m_configObjects: {}

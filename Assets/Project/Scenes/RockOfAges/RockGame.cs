@@ -1,6 +1,8 @@
 ﻿using Jusw85.Common;
+using k;
 using Prime31;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RockGame : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class RockGame : MonoBehaviour
     private void Start()
     {
         soundKit = Toolbox.Instance.TryGet<SoundKit>();
-        soundKit.playBackgroundMusic(bgm, 1.0f);
+        soundKit.playBackgroundMusic(bgm, 1.0f,false);
+
+        // SceneManager.LoadScene(Scenes.EFFECTS, LoadSceneMode.Additive);
     }
 }

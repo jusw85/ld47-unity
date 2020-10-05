@@ -5,7 +5,7 @@ public class StartScreen : MonoBehaviour
 {
     public void NextScreen()
     {
-        GameObject.FindWithTag(Tags.MAIN_GAME)?.GetComponent<MainGame>()?.ExitStart();
+        // GameObject.FindWithTag(Tags.MAIN_GAME)?.GetComponent<MainGame>()?.ExitStart();
     }
 
     // private MyFadeTransition fader;

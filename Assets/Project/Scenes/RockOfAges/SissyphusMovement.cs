@@ -55,9 +55,9 @@ public class SissyphusMovement : MonoBehaviour
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
         buttonBoost -= 1.0f * Time.deltaTime;
 
-        float atmosphereThickness = skyboxYCurve.Evaluate(transform.position.y);
-        atmosphereThickness = Mathf.Clamp(atmosphereThickness, 0f, 5f);
-        skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness);
+        // float atmosphereThickness = skyboxYCurve.Evaluate(transform.position.y);
+        // atmosphereThickness = Mathf.Clamp(atmosphereThickness, 0f, 5f);
+        // skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness);
         if (Input.GetButtonDown("Fire1"))
         {
             buttonBoost += buttonBoostValue;
