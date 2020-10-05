@@ -14,6 +14,6 @@ public class RockGame : MonoBehaviour
         soundKit = Toolbox.Instance.TryGet<SoundKit>();
         soundKit.playBackgroundMusic(bgm, 1.0f,false);
 
-        // SceneManager.LoadScene(Scenes.EFFECTS, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(Scenes.EFFECTS, LoadSceneMode.Additive);
     }
 }
