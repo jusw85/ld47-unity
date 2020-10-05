@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Project/Scenes/Start/Start.unity
-    guid: 7e6780f7b9988e7bfa2f8f9c717dc4fb
+    path: Assets/Project/Scenes/RockStart/Start.unity
+    guid: 7b8bbff6cd7cb47648f01726ccb36c94
   - enabled: 1
     path: Assets/Project/Scenes/RockOfAges/RockOfAges.unity
     guid: 4bfdbf7e8ec77817a9b3887adc581472

@@ -17,6 +17,14 @@ public class NextMusicTrigger : MonoBehaviour
     private Material skyboxMaterial;
     private float atmosphereThickness = 1.0f;
 
+    [SerializeField] private Rigidbody2D rock;
+    [SerializeField] private float rockMass;
+    [SerializeField] private SissyphusMovement sissyphusMovement;
+
+    [SerializeField] private float maxButtonBoost = 8;
+    [SerializeField] private float maxMoveSpeed = 7;
+    
+    private CustomTweenTarget tweenTarget;
     private void Start()
     {
         sk = Toolbox.Instance.TryGet<SoundKit>();
@@ -29,14 +37,18 @@ public class NextMusicTrigger : MonoBehaviour
 
         skyboxMaterial = RenderSettings.skybox;
         skyboxMaterial.SetFloat("_AtmosphereThickness", atmosphereThickness);
+        tweenTarget = new CustomTweenTarget(skyboxMaterial);
     }
 
     private void Update()
     {
-        if (!triggered && !sk.backgroundSound.audioSource.isPlaying)
+        if (!sk.backgroundSound.audioSource.isPlaying)
         {
-            triggered = true;
-            sk.playBackgroundMusic(clip, 1.0f);
+            // if (!triggered)
+            // {
+            //     triggered = true;
+            //
+            // }
 
             foreach (Animator animator in treeAnimators)
             {
@@ -48,11 +60,34 @@ public class NextMusicTrigger : MonoBehaviour
                 animator.SetTrigger("Dying");
             }
 
-            gameObject.SetActive(false);
-
-            CustomTweenTarget tweenTarget = new CustomTweenTarget(skyboxMaterial);
             FloatTween tween = new FloatTween(tweenTarget, 1.0f, 5.0f, 3.0f);
             tween.start();
+            sk.playBackgroundMusic(clip, 1.0f, false);
+
+            // gameObject.SetActive(false);
+
+            rock.mass = rockMass;
+            sissyphusMovement.InputDisabled = true;
+            StartCoroutine(CoroutineUtils.DelaySeconds(() =>
+            {
+                rock.mass = 1f;
+                sissyphusMovement.InputDisabled = false;
+                sissyphusMovement.MaxMoveSpeed = maxMoveSpeed;
+                sissyphusMovement.MaxButtonBoost = maxButtonBoost;
+                
+                FloatTween tween2 = new FloatTween(tweenTarget, 5.0f, 1.0f, 3.0f);
+                tween2.start();
+                
+                foreach (Animator animator in treeAnimators)
+                {
+                    animator.SetTrigger("Alive");
+                }
+
+                foreach (Animator animator in grassAnimators)
+                {
+                    animator.SetTrigger("Alive");
+                }
+            }, 11f));
             // ITween<float> tween = PropertyTweens.floatPropertyTo(this, "atmosphereThickness", 5, 3.0f);
             // tween.start();
             // float atmosphereThickness = 1f;
@@ -67,24 +102,24 @@ public class NextMusicTrigger : MonoBehaviour
     //     sk.playBackgroundMusic(clip, 1.0f);
     //     gameObject.SetActive(false);
     // }
-    
-     public class CustomTweenTarget : AbstractTweenTarget<Material, float>
-     {
-         public static readonly int MATERIAL_FLASHAMOUNT_ID = Shader.PropertyToID("_AtmosphereThickness");
 
-         public override void setTweenedValue(float value)
-         {
-             _target.SetFloat(MATERIAL_FLASHAMOUNT_ID, value);
-         }
+    public class CustomTweenTarget : AbstractTweenTarget<Material, float>
+    {
+        public static readonly int MATERIAL_FLASHAMOUNT_ID = Shader.PropertyToID("_AtmosphereThickness");
 
-         public override float getTweenedValue()
-         {
-             return _target.GetFloat(MATERIAL_FLASHAMOUNT_ID);
-         }
+        public override void setTweenedValue(float value)
+        {
+            _target.SetFloat(MATERIAL_FLASHAMOUNT_ID, value);
+        }
 
-         public CustomTweenTarget(Material material)
-         {
-             _target = material;
-         }
-     }
+        public override float getTweenedValue()
+        {
+            return _target.GetFloat(MATERIAL_FLASHAMOUNT_ID);
+        }
+
+        public CustomTweenTarget(Material material)
+        {
+            _target = material;
+        }
+    }
 }

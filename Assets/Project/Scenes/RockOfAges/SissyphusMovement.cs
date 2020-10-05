@@ -38,8 +38,27 @@ public class SissyphusMovement : MonoBehaviour
     private Material skyboxMaterial;
     [SerializeField] private AnimationCurve skyboxYCurve;
 
-    private float dustCooldown = 0.5f; 
-    private float currentDustCooldown; 
+    private float dustCooldown = 0.5f;
+    private float currentDustCooldown;
+    private bool inputDisabled;
+
+    public bool InputDisabled
+    {
+        get => inputDisabled;
+        set => inputDisabled = value;
+    }
+
+    public float MaxButtonBoost
+    {
+        get => maxButtonBoost;
+        set => maxButtonBoost = value;
+    }
+
+    public float MaxMoveSpeed
+    {
+        get => maxMoveSpeed;
+        set => maxMoveSpeed = value;
+    }
 
     private void Start()
     {
@@ -62,7 +81,7 @@ public class SissyphusMovement : MonoBehaviour
         {
             rockRotation.RotateTransform();
         }
-        
+
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
         buttonBoost -= buttonBoostDecay * Time.deltaTime;
 
@@ -84,8 +103,15 @@ public class SissyphusMovement : MonoBehaviour
         {
             moveInput.x = 0;
         }
+
         Vector2 velocity = rb2d.velocity;
         velocity.x = moveInput.x * moveSpeed;
+
+        if (inputDisabled)
+        {
+            velocity.x = 0f;
+        }
+
         if (moveInput.x == 0f && velocity.y > 0)
         {
             velocity.y = 0f;
@@ -107,7 +133,7 @@ public class SissyphusMovement : MonoBehaviour
         {
             SetIsFacingRight(moveInput.x > 0);
         }
-        
+
         if (isPushingRock)
         {
             animator.SetBool(AnimatorParams.IS_WALKING, true);
