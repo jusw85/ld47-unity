@@ -13,5 +13,7 @@ namespace k
 		public const string MAIN_GAME = "MainGame";
 		public const string HUDMANAGER = "HUDManager";
 		public const string ROCK = "Rock";
+		public const string TREES = "Trees";
+		public const string GRASS = "Grass";
 	}
 }
