@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: cceec07739bd80ec9afe4b069c359e87
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4932229544070051441
+    second: sisyphus-ss-1_0
+  - first:
+      213: 8427133250866912871
+    second: sisyphus-ss-1_1
+  - first:
+      213: -5156684094302477712
+    second: sisyphus-ss-1_2
+  - first:
+      213: 2867528608305238873
+    second: sisyphus-ss-1_3
+  - first:
+      213: 5690653579357809469
+    second: sisyphus-ss-1_4
+  - first:
+      213: -6137504170821796538
+    second: sisyphus-ss-1_5
+  - first:
+      213: -7418208580336167562
+    second: sisyphus-ss-1_6
+  - first:
+      213: 5104071929085579426
+    second: sisyphus-ss-1_7
+  - first:
+      213: -2700025190563438173
+    second: sisyphus-ss-1_8
+  - first:
+      213: -2205847727813245867
+    second: sisyphus-ss-1_9
+  - first:
+      213: -5032669044946437187
+    second: sisyphus-ss-1_10
+  - first:
+      213: -8145277828479139399
+    second: sisyphus-ss-1_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 180
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sisyphus-ss-1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1767bf463acc27440800000000000000
+      internalID: 4932229544070051441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_1
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e1ec4fa0133f470800000000000000
+      internalID: 8427133250866912871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_2
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072a1343327cf68b0800000000000000
+      internalID: -5156684094302477712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_3
+      rect:
+        serializedVersion: 2
+        x: 2178
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953dd4193128bc720800000000000000
+      internalID: 2867528608305238873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_4
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b6d61b74349fe40800000000000000
+      internalID: 5690653579357809469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_5
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d30ba797433daa0800000000000000
+      internalID: -6137504170821796538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_6
+      rect:
+        serializedVersion: 2
+        x: 4356
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675de4b799a3d0990800000000000000
+      internalID: -7418208580336167562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_7
+      rect:
+        serializedVersion: 2
+        x: 5082
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a05031806e45d640800000000000000
+      internalID: 5104071929085579426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_8
+      rect:
+        serializedVersion: 2
+        x: 5808
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a12cdff465978ad0800000000000000
+      internalID: -2700025190563438173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_9
+      rect:
+        serializedVersion: 2
+        x: 6534
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554c61bbd214361e0800000000000000
+      internalID: -2205847727813245867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_10
+      rect:
+        serializedVersion: 2
+        x: 7260
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbfcd7fa2e582ab0800000000000000
+      internalID: -5032669044946437187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sisyphus-ss-1_11
+      rect:
+        serializedVersion: 2
+        x: 7986
+        y: 0
+        width: 726
+        height: 726
+      alignment: 9
+      pivot: {x: 0.394958, y: 0.3809527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1c2a478f826fe80800000000000000
+      internalID: -8145277828479139399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
