@@ -26,6 +26,12 @@ public class SissyphusMovement : MonoBehaviour
     [SerializeField] [MinMaxRange(1, 10)] private RangedFloat gruntInterval = new RangedFloat(2, 3);
     private float currentGruntInterval;
 
+
+    [SerializeField] private float maxButtonBoost = 5f;
+    [SerializeField] private float maxHeightDampen = 5f;
+    [SerializeField] private float maxMoveSpeed = 10f;
+    [SerializeField] private float buttonBoostDecay = 1f;
+
     // https://github.com/TwoTailsGames/Unity-Built-in-Shaders/blob/master/DefaultResourcesExtra/Skybox-Procedural.shader
     private Material skyboxMaterial;
     [SerializeField] private AnimationCurve skyboxYCurve;
@@ -53,7 +59,7 @@ public class SissyphusMovement : MonoBehaviour
         }
         
         float heightDampening = (transform.position.y - initialY) * heightDampeningFactor;
-        buttonBoost -= 1.0f * Time.deltaTime;
+        buttonBoost -= buttonBoostDecay * Time.deltaTime;
 
         // float atmosphereThickness = skyboxYCurve.Evaluate(transform.position.y);
         // atmosphereThickness = Mathf.Clamp(atmosphereThickness, 0f, 5f);
@@ -63,12 +69,16 @@ public class SissyphusMovement : MonoBehaviour
             buttonBoost += buttonBoostValue;
         }
 
-        heightDampening = Mathf.Clamp(heightDampening, heightDampening, 10f);
-        buttonBoost = Mathf.Clamp(buttonBoost, 0f, 10f);
+        heightDampening = Mathf.Clamp(heightDampening, heightDampening, maxHeightDampen);
+        buttonBoost = Mathf.Clamp(buttonBoost, 0f, maxButtonBoost);
         float newMoveSpeed = initialMoveSpeed + buttonBoost - heightDampening;
-        moveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, 10);
+        moveSpeed = Mathf.Clamp(newMoveSpeed, minMoveSpeed, maxMoveSpeed);
 
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (moveInput.x < 0)
+        {
+            moveInput.x = 0;
+        }
         Vector2 velocity = rb2d.velocity;
         velocity.x = moveInput.x * moveSpeed;
         if (moveInput.x == 0f && velocity.y > 0)
@@ -95,13 +105,13 @@ public class SissyphusMovement : MonoBehaviour
         
         if (isPushingRock)
         {
-            animator.SetBool(AnimatorParams.IS_WALKING, false);
+            animator.SetBool(AnimatorParams.IS_WALKING, true);
             animator.SetBool(AnimatorParams.IS_PUSHING, true);
         }
         else
         {
             animator.SetBool(AnimatorParams.IS_PUSHING, false);
-            animator.SetBool(AnimatorParams.IS_WALKING, Mathf.Abs(velocity.x) > 0);
+            animator.SetBool(AnimatorParams.IS_WALKING, Mathf.Abs(velocity.x) > 0 || Mathf.Abs(moveInput.x) > 0);
         }
     }
 
