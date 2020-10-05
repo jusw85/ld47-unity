@@ -13,6 +13,8 @@ public class SissyphusMovement : MonoBehaviour
     [SerializeField] private Collider2D rockCollider;
     [SerializeField] private RockRotation rockRotation;
     [SerializeField] private float buttonBoostValue = 0.5f;
+    [SerializeField] private GameObject dustParticle;
+    [SerializeField] private Transform dustSource;
 
     private float moveSpeed;
     private Rigidbody2D rb2d;
@@ -35,6 +37,9 @@ public class SissyphusMovement : MonoBehaviour
     // https://github.com/TwoTailsGames/Unity-Built-in-Shaders/blob/master/DefaultResourcesExtra/Skybox-Procedural.shader
     private Material skyboxMaterial;
     [SerializeField] private AnimationCurve skyboxYCurve;
+
+    private float dustCooldown = 0.5f; 
+    private float currentDustCooldown; 
 
     private void Start()
     {
@@ -112,6 +117,13 @@ public class SissyphusMovement : MonoBehaviour
         {
             animator.SetBool(AnimatorParams.IS_PUSHING, false);
             animator.SetBool(AnimatorParams.IS_WALKING, Mathf.Abs(velocity.x) > 0 || Mathf.Abs(moveInput.x) > 0);
+        }
+
+        currentDustCooldown -= Time.deltaTime;
+        if (velocity.y <= -0.5 && currentDustCooldown <= 0)
+        {
+            currentDustCooldown = dustCooldown;
+            Instantiate(dustParticle, dustSource.transform.position, Quaternion.identity);
         }
     }
 
