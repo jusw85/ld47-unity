@@ -17,6 +17,17 @@ public class GrassTreeTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Animator[] treeAnimators = treeObj.GetComponentsInChildren<Animator>();
+        foreach (Animator animator in treeAnimators)
+        {
+            animator.SetTrigger("Dying");
+        }
         
+        
+        Animator[] grassAnimators = grassObj.GetComponentsInChildren<Animator>();
+        foreach (Animator animator in grassAnimators)
+        {
+            animator.SetTrigger("Dying");
+        }
+        gameObject.SetActive(false);
     }
 }
