@@ -3,4 +3,4 @@ Ludum Dare 47 in Unity
 
 Title: Rock of Ages
 
-https://ldjam.com/events/ludum-dare/47/-
+https://ldjam.com/events/ludum-dare/47/rock-of-ages
